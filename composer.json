@@ -1,0 +1,12 @@
+{
+  "name":"aknox/routing-demo",
+  "authors": [
+    {
+      "name":"Ashton Knox",
+      "email":"aknox3@mail.greenrive.edu"
+    }
+  ],
+  "require":{
+    "bcosca/fatfree-core":"dev-master"
+  }
+}
