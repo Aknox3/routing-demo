@@ -4,8 +4,7 @@
     $f3 = Base::instance();
 
     $f3->route('GET /', function() {
-        $view = new View;
-        echo $view->render('views/home.html');
+        echo '<h1>ROUTING DEMO</h1>';
     });
 
     $f3->run();
