@@ -33,8 +33,23 @@
 
     $f3->route('GET /hello/@name',
         function($f3, $params) {
-        $name = $params['name'];
-        echo "<h1>Hello, $name</h1>";
+        //$name = $params['name'];
+        //echo "<h1>Hello, $name</h1>";
+
+        $f3->set('name', $params['name']);
+        $template = new Template();
+        echo $template->render('views/hello.html');
+        });
+
+    $f3->route('GET /hi/@first/@last',
+        function($f3, $params) {
+
+            $f3->set('first', $params['first']);
+            $f3->set('last', $params['last']);
+            $f3->set('message', 'Hi');
+
+            $template = new Template();
+            echo $template->render('views/hi.html');
         });
 
     $f3->run();
