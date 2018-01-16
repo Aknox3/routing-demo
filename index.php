@@ -31,5 +31,12 @@
         echo $template->render('views/toe-rings.html');
     });
 
+    $f3->route('GET /hello/@name',
+        function($f3, $params) {
+        $name = $params['name'];
+        echo "<h1>Hello, $name</h1>";
+        });
+
     $f3->run();
+
 ?>
