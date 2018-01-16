@@ -1,5 +1,9 @@
 <?php
+    error_reporting(E_ALL);
+    ini_set("display_errors", 1);
+
     require_once "vendor/autoload.php";
+
 
     $f3 = Base::instance();
 
@@ -19,6 +23,12 @@
 
     $f3->route('GET /page1/subpage-a', function() {
         echo '<h1>THIS IS PAGE ONE SUB A!!</h1>';
+    });
+
+    $f3->route('GET /jewelry/rings/toe-rings', function() {
+        //echo '<h1>This is the Toe Rings page</h1>';
+        $template = new Template();
+        echo $template->render('views/toe-rings.html');
     });
 
     $f3->run();
